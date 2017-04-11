@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PrefGeneralViewController" customModule="IINA" customModuleProvider="target">
             <connections>
+                <outlet property="playlistAutoShowBtn" destination="wDM-Nu-qJh" id="G3l-UZ-epP"/>
+                <outlet property="triggerTimeTextField" destination="HI4-po-n0F" id="hra-cn-COf"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -333,6 +335,10 @@
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="playlistAutoShowChanged:" target="-2" id="F5P-7R-fYy"/>
+                        <binding destination="IBP-Mz-Maa" name="value" keyPath="values.playlistAutoShow" id="eNm-Il-Gpf"/>
+                    </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-po-n0F">
                     <rect key="frame" x="136" y="104" width="101" height="17"/>
@@ -358,6 +364,10 @@
                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="IBP-Mz-Maa" name="enabled" keyPath="values.playlistAutoShow" id="Q7P-cC-7SE"/>
+                        <binding destination="IBP-Mz-Maa" name="value" keyPath="values.playlistAutoShowTime" id="2C4-Z2-e10"/>
+                    </connections>
                 </textField>
             </subviews>
             <constraints>

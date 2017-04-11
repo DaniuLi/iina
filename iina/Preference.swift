@@ -54,6 +54,8 @@ struct Preference {
 
     static let playlistAutoAdd = "playlistAutoAdd"
     static let playlistAutoPlayNext = "playlistAutoPlayNext"
+    static let playlistAutoShow = "playlistAutoShow"
+    static let playlistAutoShowTime = "playlistAutoShowTime"
 
     // UI
 
@@ -372,6 +374,8 @@ struct Preference {
 
     Key.playlistAutoAdd: true,
     Key.playlistAutoPlayNext: true,
+    Key.playlistAutoShow: true,
+    Key.playlistAutoShowTime: Float(3),
 
     Key.usePhysicalResolution: true,
     Key.resizeOnlyWhenManuallyOpenFile: true,

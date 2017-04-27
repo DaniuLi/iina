@@ -616,7 +616,9 @@ class PlayerCore: NSObject {
         needEnterFullScreenForNextMedia = false
       }
     }
-    
+    if let url = info.currentURL {
+      HistoryController.shared.add(url)
+    }
     NotificationCenter.default.post(Notification(name: Constants.Noti.fileLoaded))
   }
 
